@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter,useRouteMatch,
+  Routes,Route, Switch} from "react-router-dom";
+
+  import Addressform from '../src/components/addressform/address' 
+import Home from '../src/components/home/home'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return (<div>
+   
+   
+    <div>
+    {/* <BrowserRouter>
+    <Switch>
+    <Route path='/' element={<Home/>} />
+    <Route exact path='/payroll-form' element={<Payrollform/>} />
+      <Route exact path='/add-update/:id' element={<Payrollform/>} /> 
+    </Switch>
+    </BrowserRouter> */}
+     
+    
+    <Routes>
+      {/* <Switch> */}
+      <Route path='/' element={<Home/>} />
+      <Route exact path='/address-form' element={<Addressform/>} />
+      <Route exact path='/Addressform/:id' element={<Addressform/>} /> 
+      {/* </Switch> */}
+       </Routes>
+    </div>
     </div>
   );
 }
