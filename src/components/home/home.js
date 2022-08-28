@@ -6,7 +6,7 @@ import Header from '../header/header';
 import AddressService from '../../service/AddressService';
 
 import Display from './Display';
-// import add from '../../assets/add-24px.svg'
+
 
 
 
@@ -49,6 +49,12 @@ export class Home extends React.Component {
 
             <div className='navbar navbar-xpand-md'>
                     <ul>
+                    <li className="nav-item">
+                           
+                           <a className="add-button" href="/login">                           
+                              LogOut
+                           </a>
+                      </li>
                         <li className="nav-item">
                            
                            <a className="add-button" href="/address-form">                           
